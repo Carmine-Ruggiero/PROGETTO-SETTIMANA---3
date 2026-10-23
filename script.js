@@ -4,7 +4,7 @@ const bottoneTema = document.getElementById('cambia-tema');
 bottoneTema.addEventListener('click', () => {
   // Attiva/disattiva la modalità notte sul tag body
   document.body.classList.toggle('dark-mode');
-  
+
   // Cambia dinamicamente il testo del bottone a seconda dello stato
   if (document.body.classList.contains('dark-mode')) {
     bottoneTema.innerHTML = "☀️ Modalità Giorno";
@@ -16,7 +16,7 @@ bottoneTema.addEventListener('click', () => {
 
 const immaginiData = [
   { id: 1, src: "assets/bus.JPG", alt: "Paesaggio 1", preferita: true },
-  { id: 2, src: "https://picsum.photos", alt: "Paesaggio 2", preferita: false },
+  { id: 2, src: "assets/boccaalsignore.jpeg", alt: "Paesaggio 2", preferita: false },
   { id: 3, src: "https://picsum.photos", alt: "Paesaggio 3", preferita: true },
   { id: 4, src: "https://picsum.photos", alt: "Paesaggio 4", preferita: false },
   { id: 5, src: "https://picsum.photos", alt: "Paesaggio 5", preferita: true },
@@ -25,18 +25,30 @@ const immaginiData = [
   { id: 8, src: "https://picsum.photos", alt: "Paesaggio 8", preferita: true }
 ];
 
-// 1. Seleziona il contenitore card usando il suo ID o la sua classe
-const cardContainer = document.getElementById('my-card');
+/*  Ciclo immagini */
+function renderImmagini() {
+  const galleria = document.getElementById("galleria");
+  
+  // Evita errori se l'elemento 'galleria' non esiste ancora nella pagina
+  if (!galleria) return; 
+  
+  galleria.innerHTML = "";
 
-// 2. Crea un nuovo elemento HTML di tipo 'img'
-const nuovaFoto = document.createElement('img');
+  immaginiData.forEach((immagine) => {
+    // Corretti i tag HTML e rimosso lo spazio vuoto nell'attributo src
+    galleria.innerHTML += `
+      <div class="card"> 
+        <img src="${immagine.src}" alt="${immagine.alt}">
+      </div>
+    `;
+  });
+}
 
-// 3. Imposta l'attributo src (il percorso dell'immagine) e l'alt (testo alternativo)
-nuovaFoto.src = 'percorso/della/tua/foto.jpg'; // Può essere un link web o un file locale
-nuovaFoto.alt = 'Descrizione della foto';
+// Rimosso il commento: ora la funzione parte in totale sicurezza 
+// solo quando la struttura della pagina HTML è completamente pronta
+document.addEventListener("DOMContentLoaded", renderImmagini);
 
-// 4. (Opzionale) Aggiungi una classe CSS per dargli uno stile
-nuovaFoto.classList.add('card-img');
+/*
+document.addEventListener("DOMContentLoaded",renderImmagini); */
 
-// 5. Inserisci l'immagine dentro il contenitore card
-cardContainer.appendChild(nuovaFoto);
+renderImmagini()
