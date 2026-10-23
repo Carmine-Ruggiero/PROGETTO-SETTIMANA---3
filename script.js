@@ -15,17 +15,16 @@ bottoneTema.addEventListener('click', () => {
 
 
 const immaginiData = [
-  { id: 1, src: "assets/bus.JPG", alt: "FOTO 1", preferita: true },
-  { id: 2, src: "assets/boccaalsignore.jpeg", alt: "FOTO2 ", preferita: false },
-  { id: 3, src: "assets/copenaghen.jpeg", alt: "FOTO3 ", preferita: true },
-  { id: 4, src: "assets/laplaya.jpeg", alt: "Paesaggio 4",descrizione:" Santa Pola (Spagna) 2024",preferita: false },
-  { id: 5, src: "assets/libri.jpg", alt: "Paesaggio 5", descrizione:" Londra-2020", preferita: true },
-  { id: 6, src: "assets/naples.jpeg", alt: "Paesaggio 6", preferita: false },
-  { id: 7, src: "assets/porta.jpeg", alt: "Paesaggio 7", preferita: false },
-  { id: 8, src: "assets/porta.jpeg", alt: "Paesaggio 7", preferita: false },
-  { id: 9, src: "assets/porta.jpeg", alt: "Paesaggio 7", preferita: false },
-  { id: 10, src: "assets/porta.jpeg", alt: "Paesaggio 7", preferita: false },
-  { id: 11, src: "assets/porta.jpeg", alt: "Paesaggio 7", preferita: false },
+  { id: 1, src: "assets/bus.JPG", alt: "foto1", descrizione:" Londra-2025 £49.90", preferita: true },
+  { id: 2, src: "assets/boccaalsignore.jpeg", alt: "foto2 ", descrizione:" Edinburgo-2024 £59.90", preferita: false },
+  { id: 3, src: "assets/copenaghen.jpeg", alt: "foto3", descrizione:" Copenaghen-2026 £79.90", preferita: true },
+  { id: 4, src: "assets/laplaya.jpeg", alt: "foto4",descrizione:" Santa Pola- 2024 £29.90",preferita: false },
+  { id: 5, src: "assets/libri.jpg", alt: "Paesaggio 5", descrizione:" Londra-2022 £19.90", preferita: true },
+  { id: 6, src: "assets/naples.jpeg", alt: "Paesaggio 6",descrizione:"Napoli-2022 £35.90", preferita: false },
+  { id: 7, src: "assets/cinema.jpeg", alt: "Paesaggio 7",descrizione:"Aberdeen-2023 £27.90", preferita: false },
+  { id: 8, src: "assets/colmar.jpeg", alt: "Paesaggio 7",descrizione:"Comar-2024 £39.90", preferita: false },
+  { id: 9, src: "assets/street.jpeg", alt: "Paesaggio 7",descrizione:"Parigi-2024 £19.90", preferita: false },
+
 
 ];
 
@@ -33,7 +32,7 @@ const immaginiData = [
 function renderImmagini() {
   const galleria = document.getElementById("galleria");
   
-  // Evita errori se l'elemento 'galleria' non esiste ancora nella pagina
+  
   if (!galleria) return; 
   galleria.innerHTML = "";
   immaginiData.forEach((immagine) => {
@@ -46,12 +45,15 @@ function renderImmagini() {
     `;
   });
 }
-
-// Rimosso il commento: ora la funzione parte in totale sicurezza 
-// solo quando la struttura della pagina HTML è completamente pronta
 document.addEventListener("DOMContentLoaded", renderImmagini);
 
-/*
-document.addEventListener("DOMContentLoaded",renderImmagini); */
+
+
+
+
+
+
+
+
 
 

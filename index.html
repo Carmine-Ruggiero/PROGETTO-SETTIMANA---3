@@ -12,17 +12,27 @@
 
   <header>
     <h1>📸 --- EnimraCamera --- 📸</h1>
+    <p><strong>Aggiungi al carrello quale foto vuoi comprare </strong></p>
     <div class="controlli">
-      <button onclick="filtraFoto('tutte')">Mostra Tutte</button>
-      <button onclick="filtraFoto('preferite')">Preferite ❤️</button>
       <button id="cambia-tema" onclick="toggleTema()">🌙 Modalità Notte</button>
     </div>
   </header>
 
-  <!-- Qua vanno le foto -->
-  <main class="griglia">
-    <div id="galleria" class="container"></div>
-  </main>
+  <!-- Foto -->
+<main class="griglia">
+  <div class="controlli">
+    <button onclick="filtraFoto('tutte')">Mostra Tutte</button>
+    <button onclick="filtraFoto('preferite')">Preferite ❤️</button>
+    <button onclick="aggiungiSelezionateAiPreferiti()" id="completa-selezione">Salva Selezionate ⭐</button>
+  </div>
+  
+  <div id="galleria" class="container"></div>
+  
+  <footer class="footerfinito">
+  <p>&copy; 2026 EnimraCamera &bull; Tutti i diritti riservati &bull; <a href="#">Contatti</a></p>
+</footer>
+
+</main>
 
   <script src="script.js"></script>
 
