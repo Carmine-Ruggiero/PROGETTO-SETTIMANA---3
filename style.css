@@ -112,14 +112,18 @@ body.dark-mode #cambia-tema:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin-top: 2rem;
+  
 }
 .card img{
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  object-position: center;
-  display: block;}
+ width: 100%;
+  height: 50%;      
+  object-fit: contain;  
+ 
+  display: block;
+  margin-top: 20%; 
+  margin-bottom: 20%;
+}
+ 
 
 /* Hover Animation */
 .card:hover {
@@ -133,14 +137,7 @@ body.dark-mode #cambia-tema:hover {
 }
 
 /* Optional Category Tag */
-.card-tag {
-  display: inline-block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #0066cc;
-  margin-bottom: 8px;
-}
+
 
 /* Card Title */
 .card-title {
@@ -152,7 +149,7 @@ body.dark-mode #cambia-tema:hover {
 /* Card Description */
 .card-text {
   font-size: 0.9rem;
-  color: #666666;
+  color: #ce3434;
   line-height: 1.5;
   margin: 0 0 20px 0;
 }
@@ -173,4 +170,11 @@ body.dark-mode #cambia-tema:hover {
 
 .card-button:hover {
   background-color: #004499;
+}
+.card h3 {
+  color: #9d0f0f;
+  font-size: 1rem;
+  padding-left: 40%;
+ 
+
 }
