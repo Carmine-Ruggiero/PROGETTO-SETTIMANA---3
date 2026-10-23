@@ -18,10 +18,14 @@ const immaginiData = [
   { id: 1, src: "assets/bus.JPG", alt: "FOTO 1", preferita: true },
   { id: 2, src: "assets/boccaalsignore.jpeg", alt: "FOTO2 ", preferita: false },
   { id: 3, src: "assets/copenaghen.jpeg", alt: "FOTO3 ", preferita: true },
-  { id: 4, src: "assets/laplaya.jpeg", alt: "Paesaggio 4", preferita: false },
-  { id: 5, src: "assets/libri.jpg", alt: "Paesaggio 5", descrizione:"foto5", preferita: true },
+  { id: 4, src: "assets/laplaya.jpeg", alt: "Paesaggio 4",descrizione:" Santa Pola (Spagna) 2024",preferita: false },
+  { id: 5, src: "assets/libri.jpg", alt: "Paesaggio 5", descrizione:" Londra-2020", preferita: true },
   { id: 6, src: "assets/naples.jpeg", alt: "Paesaggio 6", preferita: false },
   { id: 7, src: "assets/porta.jpeg", alt: "Paesaggio 7", preferita: false },
+  { id: 8, src: "assets/porta.jpeg", alt: "Paesaggio 7", preferita: false },
+  { id: 9, src: "assets/porta.jpeg", alt: "Paesaggio 7", preferita: false },
+  { id: 10, src: "assets/porta.jpeg", alt: "Paesaggio 7", preferita: false },
+  { id: 11, src: "assets/porta.jpeg", alt: "Paesaggio 7", preferita: false },
 
 ];
 
