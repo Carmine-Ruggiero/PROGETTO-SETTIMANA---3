@@ -1,0 +1,105 @@
+/* ==========================================
+   STILI BASE (Modalità Chiara / Giorno)
+   ========================================== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Centra la testata e dispone gli elementi in verticale */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra orizzontalmente */
+  justify-content: center;
+  padding: 30px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* Centra i bottoni di controllo */
+.controlli {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Rende la barra reattiva sui telefoni */
+}
+
+/* Stile comune per tutti i bottoni della pagina */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 25px;
+  background-color: #ffffff;
+  color: #333333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- STILE SPECIFICO DEL BOTTONE TEMA (Stato Giorno) --- */
+#cambia-tema {
+  background-color: #2c3e50; /* Blu scuro/notte */
+  color: #ffffff;
+  border: none;
+}
+
+#cambia-tema:hover {
+  background-color: #34495e;
+}
+
+/* ==========================================
+   STILI IN MODALITÀ NOTTE (.dark-mode)
+   ========================================== */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode button {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #444444;
+}
+
+/* --- CAMBIO COLORE DEL BOTTONE IN MODALITÀ NOTTE --- */
+body.dark-mode #cambia-tema {
+  background-color: #f1c40f; /* Giallo Sole */
+  color: #121212;            /* Testo scuro per un contrasto perfetto */
+  font-weight: bold;
+}
+
+body.dark-mode #cambia-tema:hover {
+  background-color: #f39c12;
+}
+
+/* ==========================================
+   STILIZZAZIONE DELLE CARD
+   ========================================== */
+.card{
+  background-color: #f1c40f;
+  color: #444444;
+  border-radius: 3px;
+  
+}
