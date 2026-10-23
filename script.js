@@ -15,14 +15,14 @@ bottoneTema.addEventListener('click', () => {
 
 
 const immaginiData = [
-  { id: 1, src: "assets/bus.JPG", alt: "Paesaggio 1", preferita: true },
-  { id: 2, src: "assets/boccaalsignore.jpeg", alt: "Paesaggio 2", preferita: false },
-  { id: 3, src: "https://picsum.photos", alt: "Paesaggio 3", preferita: true },
-  { id: 4, src: "https://picsum.photos", alt: "Paesaggio 4", preferita: false },
-  { id: 5, src: "https://picsum.photos", alt: "Paesaggio 5", preferita: true },
-  { id: 6, src: "https://picsum.photos", alt: "Paesaggio 6", preferita: false },
-  { id: 7, src: "https://picsum.photos", alt: "Paesaggio 7", preferita: false },
-  { id: 8, src: "https://picsum.photos", alt: "Paesaggio 8", preferita: true }
+  { id: 1, src: "assets/bus.JPG", alt: "FOTO 1", preferita: true },
+  { id: 2, src: "assets/boccaalsignore.jpeg", alt: "FOTO2 ", preferita: false },
+  { id: 3, src: "assets/copenaghen.jpeg", alt: "FOTO3 ", preferita: true },
+  { id: 4, src: "assets/laplaya.jpeg", alt: "Paesaggio 4", preferita: false },
+  { id: 5, src: "assets/libri.jpg", alt: "Paesaggio 5", descrizione:"foto5", preferita: true },
+  { id: 6, src: "assets/naples.jpeg", alt: "Paesaggio 6", preferita: false },
+  { id: 7, src: "assets/porta.jpeg", alt: "Paesaggio 7", preferita: false },
+
 ];
 
 /*  Ciclo immagini */
@@ -31,14 +31,13 @@ function renderImmagini() {
   
   // Evita errori se l'elemento 'galleria' non esiste ancora nella pagina
   if (!galleria) return; 
-  
   galleria.innerHTML = "";
-
   immaginiData.forEach((immagine) => {
     // Corretti i tag HTML e rimosso lo spazio vuoto nell'attributo src
     galleria.innerHTML += `
       <div class="card"> 
         <img src="${immagine.src}" alt="${immagine.alt}">
+        <h3>${immagine.descrizione}</h3>
       </div>
     `;
   });
@@ -51,4 +50,4 @@ document.addEventListener("DOMContentLoaded", renderImmagini);
 /*
 document.addEventListener("DOMContentLoaded",renderImmagini); */
 
-renderImmagini()
+
